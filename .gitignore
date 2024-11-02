@@ -28,5 +28,3 @@ pnpm-debug.log*
 
 # fastly
 .compute-js/
-
-# github actions
