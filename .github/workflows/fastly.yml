@@ -13,7 +13,7 @@ jobs:
     name: Deploy to www.fastly.com
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Install Project Dependencies
         run: npm install
