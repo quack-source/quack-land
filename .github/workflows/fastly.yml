@@ -1,0 +1,31 @@
+name: Fastly Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
+
+jobs:
+  deploy:
+    name: Deploy to www.fastly.com
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Project Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Install Fastly Compute Dependencies
+        run: npm install
+        working-directory: './compute-js'
+
+      - name: Deploy to Fastly Compute
+        uses: fastly/compute-actions@v9
+        with:
+          project_directory: './compute-js'

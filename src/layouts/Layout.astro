@@ -5,6 +5,20 @@ interface Props {
 
 const { title } = Astro.props;
 import Header from "../components/Header.astro";
+import '@fontsource/plus-jakarta-sans/200.css';
+import '@fontsource/plus-jakarta-sans/300.css';
+import '@fontsource/plus-jakarta-sans/400.css';
+import '@fontsource/plus-jakarta-sans/500.css';
+import '@fontsource/plus-jakarta-sans/600.css';
+import '@fontsource/plus-jakarta-sans/700.css';
+import '@fontsource/plus-jakarta-sans/800.css';
+import '@fontsource/plus-jakarta-sans/200-italic.css';
+import '@fontsource/plus-jakarta-sans/300-italic.css';
+import '@fontsource/plus-jakarta-sans/400-italic.css';
+import '@fontsource/plus-jakarta-sans/500-italic.css';
+import '@fontsource/plus-jakarta-sans/600-italic.css';
+import '@fontsource/plus-jakarta-sans/700-italic.css';
+import '@fontsource/plus-jakarta-sans/800-italic.css';
 ---
 
 <html lang="en">
@@ -22,20 +36,3 @@ import Header from "../components/Header.astro";
 		<slot />
 	</body>
 </html>
-
-<style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
