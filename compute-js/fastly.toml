@@ -1,7 +1,7 @@
 # This file describes a Fastly Compute package. To learn more visit:
 # https://developer.fastly.com/reference/fastly-toml/
 
-manifest_version = 3
+manifest_version = 2
 name = "quack-land"
 description = "Fastly Compute static site"
 authors = [ "ayemate@quack.host" ]
@@ -10,7 +10,3 @@ service_id = "UsqzeSzq75KPFm0DGcUTL7"
 
 [scripts]
   build = "npm run build"
-
-[setup]
-  [setup.build]
-    command = "npm install && npm run build"
