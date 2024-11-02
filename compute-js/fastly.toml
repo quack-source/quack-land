@@ -10,3 +10,7 @@ service_id = "UsqzeSzq75KPFm0DGcUTL7"
 
 [scripts]
   build = "npm run build"
+
+[setup]
+  [setup.build]
+    command = "npm install && npm run build"

@@ -25,7 +25,13 @@ jobs:
         run: npm install
         working-directory: './compute-js'
 
+      - name: Build Fastly Compute
+        working-directory: './compute-js'
+        run: |
+          npm run build
+          fastly compute build
+
       - name: Deploy to Fastly Compute
         uses: fastly/compute-actions@v9
         with:
-          project_directory: 'compute-js'
+          project_directory: './compute-js'
